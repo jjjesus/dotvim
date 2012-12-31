@@ -1,4 +1,4 @@
 dotvim
 ======
 
-Vim dot files
+Vim dot files on Linux.
