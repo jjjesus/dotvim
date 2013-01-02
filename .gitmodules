@@ -21,3 +21,6 @@
 	path = bundle/OmniCppComplete
 	url = git://github.com/vim-scripts/OmniCppComplete.git
     ignore = untracked
+[submodule "bundle/vim-align"]
+	path = bundle/vim-align
+	url = git://github.com/tsaleh/vim-align.git
