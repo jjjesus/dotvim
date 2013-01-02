@@ -16,7 +16,7 @@ set wildmenu
 set cursorline
 set laststatus=2
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
-set guifont=Lucida_Console:h11
+"set guifont=Lucida_Console:h11
 
 " When exit, don't clear screen
 "
@@ -47,6 +47,7 @@ colorscheme solarized
 autocmd VimEnter * if !argc() | NERDTree | endif
 autocmd BufEnter * silent! lcd %:p:h
 
+set guioptions-=T "Remove GUI toolbar icons
 
 function! SuperCleverTab()
     if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
