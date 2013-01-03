@@ -45,7 +45,7 @@ colorscheme solarized
 "
 "
 autocmd VimEnter * if !argc() | NERDTree | endif
-autocmd BufEnter * silent! lcd %:p:h
+set autochdir
 
 set guioptions-=T "Remove GUI toolbar icons
 
