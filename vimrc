@@ -1,4 +1,5 @@
 set nocompatible
+let mapleader=','
 call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
@@ -9,6 +10,8 @@ set hlsearch
 set backspace=indent,eol,start
 let loaded_matchparen = 1
 set tags=./tags;/
+" Helps with object-oriented Lua (colon functions)
+set iskeyword+=:
 "
 set ruler
 set showcmd
@@ -25,6 +28,7 @@ set t_te=
 
 let Tlist_WinWidth = 50
 
+set visualbell
 
 "
 " Indentation
@@ -70,4 +74,7 @@ map <C-F11> :TlistToggle<CR>
 map <C-F10> :NERDTreeToggle<CR>
 map <C-F9> :cw<CR>
 
+map <leader>n :tabnew<CR>
+map <leader>k :tabprev<CR>
+map <leader>l :tabnext<CR>
 
