@@ -73,8 +73,11 @@ map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 map <C-F11> :TlistToggle<CR>
 map <C-F10> :NERDTreeToggle<CR>
 map <C-F9> :cw<CR>
+map <C-F8> :TagbarToggle<CR>
+map <C-F7> :ccl<CR>
 
-map <leader>n :tabnew<CR>
-map <leader>k :tabprev<CR>
-map <leader>l :tabnext<CR>
+map <Leader>p "+gP 
+
+map <Leader>j :tabprev<CR>
+map <Leader>k :tabnext<CR>
 
