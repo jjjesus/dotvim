@@ -78,6 +78,7 @@ map <C-F7> :ccl<CR>
 
 map <Leader>p "+gP 
 
+map <Leader>n :tabnew<CR>
 map <Leader>j :tabprev<CR>
 map <Leader>k :tabnext<CR>
 
