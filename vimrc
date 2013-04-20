@@ -19,7 +19,8 @@ set wildmenu
 set cursorline
 set laststatus=2
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
-"set guifont=Lucida_Console:h11
+set guifont=Liberation\ Mono\ 11
+
 
 " When exit, don't clear screen
 "
