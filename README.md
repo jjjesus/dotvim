@@ -12,4 +12,4 @@ Then, link the vimrc to the home directory using:
 
 Adding plugins with pathogen
 ------
-git submodule add https://github.com/scrooloose/nerdtree.git bundle/nerdtree
+     git submodule add https://github.com/scrooloose/nerdtree.git bundle/nerdtree
