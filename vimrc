@@ -43,6 +43,9 @@ set cindent
 set expandtab
 " Trim trailing whitespace
 autocmd FileType c,cpp,java,php,xml autocmd BufWritePre <buffer> :%s/\s\+$//e
+"
+" Type 'normal gg=G' to reformat indentation
+"
 " Colors
 "
 set background=dark
