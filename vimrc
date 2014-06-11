@@ -7,6 +7,7 @@ filetype plugin indent on
 syntax enable
 set nowrap
 set hlsearch
+set ic
 set backspace=indent,eol,start
 let loaded_matchparen = 1
 set tags=./tags;/
@@ -21,6 +22,9 @@ set laststatus=2
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 set guifont=Liberation\ Mono\ 11
 
+" Initial size
+set lines=50 
+set columns=90
 
 " When exit, don't clear screen
 "
@@ -58,31 +62,39 @@ set autochdir
 
 set guioptions-=T "Remove GUI toolbar icons
 
-function! SuperCleverTab()
-    if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
-        return "\<Tab>"
-    else
-        if &omnifunc != ''
-            return "\<C-X>\<C-O>"
-        elseif &dictionary != ''
-            return "\<C-K>"
-        else
-            return "\<C-N>"
-        endif
-    endif
-endfunction
+"function! SuperCleverTab()
+"    if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
+"        return "\<Tab>"
+"    else
+""        if &omnifunc != ''
+""           return "\<C-X>\<C-O>"
+"        elseif &dictionary != ''
+"            return "\<C-K>"
+"        else
+"            return "\<C-N>"
+"        endif
+"    endif
+"endfunction
 
 
-inoremap <Tab> <C-R>=SuperCleverTab()<cr>
+"inoremap <Tab> <C-R>=SuperCleverTab()<cr>
+
+" Rebuild ctags
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 map <C-F11> :TlistToggle<CR>
-map <C-F10> :NERDTreeToggle<CR>
-map <C-F9> :cw<CR>
 map <C-F8> :TagbarToggle<CR>
+
+map <C-F10> :NERDTreeToggle<CR>
+
+" quickfix window
+map <C-F9> :cw<CR>
+" Close quickfix window
 map <C-F7> :ccl<CR>
 
+" Paste from non-Vim
 map <Leader>p "+gP 
 
+" Tab windows
 map <Leader>n :tabnew<CR>
 map <Leader>j :tabprev<CR>
 map <Leader>k :tabnext<CR>
