@@ -19,7 +19,7 @@ set showcmd
 set wildmenu
 set cursorline
 set laststatus=2
-set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+set statusline=%<%f\%{fugitive#statusline()}\%h%m%r%=%-14.(%l,%c%V%)\ %P
 set guifont=Liberation\ Mono\ 11
 
 " Initial size
@@ -98,4 +98,13 @@ map <Leader>p "+gP
 map <Leader>n :tabnew<CR>
 map <Leader>j :tabprev<CR>
 map <Leader>k :tabnext<CR>
+
+" Folding
+set foldmethod=indent
+set foldlevel=99
+" Python PEP 8 coding standard
+let g:pep8_map='<leader>8'
+" Python tab completion
+au FileType python set omnifunc=pythoncomplete#Complete
+let g:SuperTabDefaultCompletionType = "context"
 
